@@ -146,8 +146,10 @@ const activeSection = ref('hero')
 
 const navItems = [
   { id: 'hero', name: 'Início', href: '#hero' },
+  { id: 'timeline', name: 'História', href: '#timeline' },
   { id: 'activities', name: 'Atividades', href: '#activities' },
   { id: 'gallery', name: 'Galeria', href: '#gallery' },
+  { id: 'newsletter', name: 'Newsletter', href: '#newsletter' },
   { id: 'contact', name: 'Contato', href: '#contact' }
 ]
 

@@ -39,6 +39,8 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
 import Navigation from '@/components/common/Navigation.vue'
+import CustomCursor from '@/components/ui/CustomCursor.vue'
+import ParticleSystem from '@/components/ui/ParticleSystem.vue'
 
 const progressBar = ref<HTMLElement>()
 

@@ -300,6 +300,18 @@
     color: #ff00ff;
   }
 
+  .text-primary {
+    color: #ffffff;
+  }
+
+  .text-secondary {
+    color: #e0e0e0;
+  }
+
+  .text-muted {
+    color: #a0a0a0;
+  }
+
   /* Custom backgrounds */
   .bg-glass {
     background: rgba(255, 255, 255, 0.05);

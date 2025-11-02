@@ -305,6 +305,7 @@
 <script setup lang="ts">
 import { ref, reactive } from 'vue'
 import { partners, partnerTypes, type Partner } from '@/assets/data/partners'
+import SocialShare from '@/components/ui/SocialShare.vue'
 
 interface FormData {
   name: string

@@ -215,7 +215,10 @@
 
   /* Text components */
   .text-gradient {
-    @apply gradient-text;
+    background: linear-gradient(135deg, #00ff88, #00ffff, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   .text-shadow {

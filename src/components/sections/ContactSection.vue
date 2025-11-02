@@ -238,6 +238,11 @@
         </div>
       </div>
 
+      <!-- Social Sharing Section -->
+      <div class="mb-16 section-title-animate">
+        <SocialShare />
+      </div>
+
       <!-- Partners Section -->
       <div class="section-title-animate">
         <div class="text-center mb-12">

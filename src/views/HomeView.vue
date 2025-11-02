@@ -51,6 +51,8 @@ import HeroSection from '@/components/sections/HeroSection.vue'
 import ActivitiesSection from '@/components/sections/ActivitiesSection.vue'
 import GallerySection from '@/components/sections/GallerySection.vue'
 import ContactSection from '@/components/sections/ContactSection.vue'
+import Timeline from '@/components/ui/Timeline.vue'
+import NewsletterSignup from '@/components/ui/NewsletterSignup.vue'
 
 const showScrollIndicator = ref(true)
 

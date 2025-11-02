@@ -255,6 +255,11 @@
   .btn-accent {
     @apply glass-button border-arts/50 hover:border-arts hover:bg-arts/20;
   }
+
+  /* Hover lift utility */
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-2;
+  }
 }
 
 /* Utility Classes */

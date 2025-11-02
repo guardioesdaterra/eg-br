@@ -182,7 +182,7 @@
 
   /* Navigation components */
   .nav-link {
-    @apply text-text-primary hover:text-nature transition-colors duration-300 relative;
+    @apply text-primary hover:text-nature transition-colors duration-300 relative;
   }
 
   .nav-link.active {

@@ -1,5 +1,13 @@
 <template>
   <div id="app" class="min-h-screen bg-black text-white">
+    <!-- Custom Cursor -->
+    <CustomCursor />
+
+    <!-- Particle System (Background) -->
+    <div class="fixed inset-0 pointer-events-none">
+      <ParticleSystem />
+    </div>
+
     <!-- Navigation -->
     <Navigation />
 

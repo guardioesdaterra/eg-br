@@ -3,11 +3,32 @@
     <!-- Hero Section -->
     <HeroSection />
 
+    <!-- Timeline Section -->
+    <section id="timeline" class="section section-animate py-20">
+      <div class="container">
+        <div class="text-center mb-16 section-title-animate">
+          <h2 class="section-title text-gradient mb-6">Nossa História</h2>
+          <p class="text-lg text-text-secondary max-w-3xl mx-auto">
+            Uma jornada de 10 anos de ativismo ambiental, arte e transformação social
+            em Águas da Prata. Cada marco representa nosso compromisso com um futuro mais sustentável.
+          </p>
+        </div>
+        <Timeline />
+      </div>
+    </section>
+
     <!-- Activities Section -->
     <ActivitiesSection />
 
     <!-- Gallery Section -->
     <GallerySection />
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="section section-animate py-20">
+      <div class="container">
+        <NewsletterSignup />
+      </div>
+    </section>
 
     <!-- Contact Section -->
     <ContactSection />

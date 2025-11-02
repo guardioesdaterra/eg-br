@@ -202,15 +202,15 @@
 
   /* Card components */
   .activity-card {
-    @apply glass-card p-6 card-hover cursor-pointer;
+    @apply glass-card p-6 cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-glass-hover;
   }
 
   .gallery-item {
-    @apply relative overflow-hidden rounded-lg glass-card hover-lift cursor-pointer;
+    @apply relative overflow-hidden rounded-lg glass-card transition-all duration-300 hover:-translate-y-2 hover:shadow-glass-hover cursor-pointer;
   }
 
   .partner-card {
-    @apply glass-card p-6 text-center card-hover cursor-pointer;
+    @apply glass-card p-6 text-center cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-glass-hover;
   }
 
   /* Text components */

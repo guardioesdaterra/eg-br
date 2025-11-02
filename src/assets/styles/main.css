@@ -1,0 +1,439 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Base Styles */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: #000000;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* Selection colors */
+  ::selection {
+    background: rgba(0, 255, 136, 0.3);
+    color: #ffffff;
+  }
+
+  ::-moz-selection {
+    background: rgba(0, 255, 136, 0.3);
+    color: #ffffff;
+  }
+
+  /* Focus styles */
+  :focus-visible {
+    outline: 2px solid #00ff88;
+    outline-offset: 2px;
+  }
+
+  /* Link styles */
+  a {
+    color: #00ff88;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color: #00ffaa;
+  }
+
+  /* Heading styles */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  h3 {
+    font-size: clamp(1.25rem, 3vw, 2rem);
+  }
+
+  /* Paragraph styles */
+  p {
+    margin-bottom: 1rem;
+    color: #e0e0e0;
+  }
+
+  /* List styles */
+  ul, ol {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+    color: #e0e0e0;
+  }
+
+  /* Code styles */
+  code {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    padding: 0.2rem 0.4rem;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+  }
+
+  /* Horizontal rule */
+  hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    margin: 2rem 0;
+  }
+
+  /* Blockquote */
+  blockquote {
+    border-left: 4px solid #00ff88;
+    padding-left: 1rem;
+    margin: 1rem 0;
+    font-style: italic;
+    color: #a0a0a0;
+  }
+
+  /* Table styles */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+  }
+
+  th, td {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.75rem;
+    text-align: left;
+  }
+
+  th {
+    background: rgba(255, 255, 255, 0.05);
+    font-weight: 600;
+  }
+}
+
+/* Component Styles */
+@layer components {
+  /* Glass morphism components */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .glass-button {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    color: #ffffff;
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .glass-input {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: #ffffff;
+    transition: all 0.3s ease;
+  }
+
+  .glass-input:focus {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(0, 255, 136, 0.5);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+    outline: none;
+  }
+
+  .glass-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  /* Layout components */
+  .section {
+    @apply py-20 relative;
+  }
+
+  .container {
+    @apply w-full max-w-6xl mx-auto px-4;
+  }
+
+  .grid-responsive {
+    @apply grid gap-6 grid-cols-1;
+  }
+
+  .grid-responsive-2 {
+    @apply grid gap-8 grid-cols-1;
+  }
+
+  @media (min-width: 640px) {
+    .grid-responsive {
+      @apply grid-cols-2;
+    }
+    .grid-responsive-2 {
+      @apply grid-cols-2;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .grid-responsive {
+      @apply grid-cols-3;
+    }
+  }
+
+  /* Navigation components */
+  .nav-link {
+    @apply text-primary hover:text-nature transition-colors duration-300 relative;
+  }
+
+  .nav-link.active {
+    @apply text-nature;
+  }
+
+  .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #00ff88, #00ffff);
+    border-radius: 1px;
+  }
+
+  /* Card components */
+  .activity-card {
+    @apply glass-card p-6 cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-glass-hover;
+  }
+
+  .gallery-item {
+    @apply relative overflow-hidden rounded-lg glass-card transition-all duration-300 hover:-translate-y-2 hover:shadow-glass-hover cursor-pointer;
+  }
+
+  .partner-card {
+    @apply glass-card p-6 text-center cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-glass-hover;
+  }
+
+  /* Text components */
+  .text-gradient {
+    background: linear-gradient(135deg, #00ff88, #00ffff, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-shadow {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Utility components */
+  .scroll-indicator {
+    @apply absolute bottom-8 left-1/2 transform -translate-x-1/2 text-nature animate-bounce;
+  }
+
+  .backdrop-blur-strong {
+    backdrop-filter: blur(30px);
+  }
+
+  /* Image components */
+  .img-cover {
+    @apply w-full h-full object-cover;
+  }
+
+  .img-contain {
+    @apply w-full h-full object-contain;
+  }
+
+  /* Button variants */
+  .btn-primary {
+    @apply glass-button border-nature/50 hover:border-nature hover:bg-nature/20;
+  }
+
+  .btn-secondary {
+    @apply glass-button border-water/50 hover:border-water hover:bg-water/20;
+  }
+
+  .btn-accent {
+    @apply glass-button border-arts/50 hover:border-arts hover:bg-arts/20;
+  }
+
+  /* Hover lift utility */
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-2;
+  }
+}
+
+/* Utility Classes */
+@layer utilities {
+  /* Custom gradients */
+  .gradient-bg-nature {
+    background: linear-gradient(135deg, #00ff88, #00ffaa);
+  }
+
+  .gradient-bg-water {
+    background: linear-gradient(135deg, #00ffff, #00dddd);
+  }
+
+  .gradient-bg-arts {
+    background: linear-gradient(135deg, #ff00ff, #ff00ff);
+  }
+
+  /* Custom shadows */
+  .shadow-glow-nature {
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+  }
+
+  .shadow-glow-water {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  }
+
+  .shadow-glow-arts {
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+  }
+
+  /* Custom blur variants */
+  .backdrop-blur-glass {
+    backdrop-filter: blur(20px);
+  }
+
+  /* Custom text colors */
+  .text-nature {
+    color: #00ff88;
+  }
+
+  .text-water {
+    color: #00ffff;
+  }
+
+  .text-arts {
+    color: #ff00ff;
+  }
+
+  .text-primary {
+    color: #ffffff;
+  }
+
+  .text-secondary {
+    color: #e0e0e0;
+  }
+
+  .text-muted {
+    color: #a0a0a0;
+  }
+
+  /* Custom backgrounds */
+  .bg-glass {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .bg-glass-hover:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .bg-nature-glass {
+    background: rgba(0, 255, 136, 0.1);
+  }
+
+  .bg-water-glass {
+    background: rgba(0, 255, 255, 0.1);
+  }
+
+  .bg-arts-glass {
+    background: rgba(255, 0, 255, 0.1);
+  }
+
+  /* Custom borders */
+  .border-glass {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .border-nature {
+    border-color: #00ff88;
+  }
+
+  .border-water {
+    border-color: #00ffff;
+  }
+
+  .border-arts {
+    border-color: #ff00ff;
+  }
+
+  /* Spacing utilities */
+  .space-y-glass > * + * {
+    margin-top: 1.5rem;
+  }
+
+  /* Animation utilities */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+  }
+
+  .animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .animate-stagger-1 { transition-delay: 100ms; }
+  .animate-stagger-2 { transition-delay: 200ms; }
+  .animate-stagger-3 { transition-delay: 300ms; }
+  .animate-stagger-4 { transition-delay: 400ms; }
+  .animate-stagger-5 { transition-delay: 500ms; }
+  .animate-stagger-6 { transition-delay: 600ms; }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .glass-morphism {
+    background: white !important;
+    border: 1px solid #ccc !important;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .glass-morphism {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid #ffffff;
+  }
+
+  .text-muted {
+    color: #e0e0e0;
+  }
+}

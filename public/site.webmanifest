@@ -1,0 +1,83 @@
+{
+  "name": "Guardiões da Terra",
+  "short_name": "Guardiões",
+  "description": "ONG ambiental que combina arte, música e ativismo climático para proteger o meio ambiente",
+  "theme_color": "#00ff88",
+  "background_color": "#000000",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "start_url": "/",
+  "lang": "pt-BR",
+  "categories": ["education", "environment", "nonprofit", "social"],
+  "icons": [
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Atividades",
+      "short_name": "Atividades",
+      "description": "Conheça nossos projetos e atividades",
+      "url": "/#activities",
+      "icons": [{ "src": "/favicon-96x96.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Galeria",
+      "short_name": "Galeria",
+      "description": "Veja fotos dos nossos eventos",
+      "url": "/#gallery",
+      "icons": [{ "src": "/favicon-96x96.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Contato",
+      "short_name": "Contato",
+      "description": "Entre em contato conosco",
+      "url": "/#contact",
+      "icons": [{ "src": "/favicon-96x96.png", "sizes": "96x96" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Guardiões da Terra - Desktop"
+    },
+    {
+      "src": "/screenshot-mobile.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Guardiões da Terra - Mobile"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "web",
+      "url": "https://guardioesdaterra.com/"
+    }
+  ],
+  "prefer_related_applications": false
+}
